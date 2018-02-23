@@ -21,6 +21,8 @@ public class Persona
     private int caloriasIngeridas;
     // Calorias maximas.
     private int maxCalorias;
+    // Comida con mayor cantidad calorica ingerida.
+    private int ComidaCaloriaMayorIngerida;
     /**
      * El constructor de la clase Persona deberá tener en el mismo orden
      * @parametro Nombre = Nombre de la persona
@@ -167,5 +169,24 @@ public class Persona
             caloriasIngeridas = caloriasIngeridas + comida.getCalorias();
         }
         return aDevolver;
+    }
+    
+    /**
+     * 
+     * @return Devuelve la respuesta a la pregunta.
+     */
+    public String contestar(String pregunta) {
+        String respuesta = "";
+        if(caloriasIngeridas > maxCalorias || pregunta.indexOf(nombre) != -1){
+            respuesta = pregunta.toUpperCase();
+        }
+        else if(pregunta.length() % 3 == 0) {
+            respuesta = "SI";
+        }
+        else {
+           respuesta = "NO";
+        }
+       System.out.println(respuesta);
+        return respuesta;
     }
 }
