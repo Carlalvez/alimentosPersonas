@@ -7,27 +7,30 @@
  */
 public class personas
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    // Nombre persona
+    private String nombre;
+    // Sexo persona
+    private boolean esHombre; //true hombre
+    // KG persona
+    private int peso;
+    // Altura persona
+    private int altura;
+    // Edad persona
+    private int edad;
     /**
-     * Constructor for objects of class personas
-     */
-    public personas()
+     * El constructor de la clase Persona deberá tener en el mismo orden
+     * Nombre = Nombre de la persona
+     * genero = Sexo de la persona
+     * peso = Peso de la persona
+     * altura = Estatura de la persona
+     * edad = Edad de la persona
+     **/
+    public personas (String nombre, boolean genero, int peso, int altura, int edad)
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+      this.nombre = nombre;
+      genero = esHombre;
+      this.peso = peso;
+      this.altura = altura;
+      this.edad = edad;
     }
 }
