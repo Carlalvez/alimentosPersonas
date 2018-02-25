@@ -23,6 +23,8 @@ public class Persona
     private int maxCalorias;
     // Comida con mayor cantidad calorica ingerida.
     private int ComidaCaloriaMayorIngerida;
+    // Comida mas calórica.
+    private Comida comidaMasPesada;
     /**
      * El constructor de la clase Persona deberá tener en el mismo orden
      * @parametro Nombre = Nombre de la persona
@@ -38,6 +40,7 @@ public class Persona
         this.peso = peso;
         this.altura = altura;
         this.edad = edad;
+        comidaMasPesada = null;
         caloriasIngeridas = 0;
         maxCalorias = (10 * peso) + (6 * altura) + (5 * edad);
         maxCalorias = (sexo)?maxCalorias + 5 : maxCalorias - 161; 
@@ -97,6 +100,17 @@ public class Persona
      */
     public int getCaloriasIngeridas() {
         return caloriasIngeridas;
+    }
+    
+    /**
+     * 
+     * @return comida más calorica consumida hasta el momento o si no come, no devuelve nada
+     **/
+    public String getAlimentoMasCaloricoConsumido(){
+       if(comidaMasPesada != null) {
+            System.out.println(comidaMasPesada.getNombre());
+        }
+        return (comidaMasPesada != null)? comidaMasPesada.getNombre() : null;
     }
     
     /**
@@ -167,14 +181,21 @@ public class Persona
         else {
             aDevolver = comida.getCalorias();
             caloriasIngeridas = caloriasIngeridas + comida.getCalorias();
-        }
+        } 
+        
+        if(comidaMasPesada == null || comidaMasPesada.getCalorias() <= caloriasIngeridas) {
+                comidaMasPesada = comida;
+            }
         return aDevolver;
     }
     
     /**
      * 
-     * @return Devuelve la respuesta a la pregunta.
-     */
+     * @returnSi no ha sobrepasado su metabolismo basal, te contestará "SI" o "NO" (¡en mayúsculas!) dependiendo de si la pregunta tiene una longitud (es decir, el número de letras de la misma)
+     * divisible por 3 o no, respectivamente.
+     * En caso de que la persona ya haya sobrepasado el metabolismo basal o en el caso de que tu pregunta contenga el nombre de la persona, responderá con la misma pregunta que le has hecho pero 
+     * gritando (es decir, el mismo texto de la pregunta pero en mayúsculas) indiferentemente de la longitud de a pregunta.
+     **/
     public String contestar(String pregunta) {
         String respuesta = "";
         if(caloriasIngeridas > maxCalorias || pregunta.indexOf(nombre) != -1){

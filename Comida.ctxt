@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Comida
+comment0.text=\r\n\r\n\ @author\ (Carlos\ Alvarez)\r\n\ @version\ (23/02/2018)\r\n
+comment1.params=nombreComida\ calorias
+comment1.target=Comida(java.lang.String,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ comida\r\n\ @param\ nombre\ El\ nombre\ de\ la\ comida.\r\n\ @param\ calorias\ La\ cantidad\ de\ calorias\ que\ tiene\ la\ comida.\r\n
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment2.text=\r\n\r\n\ @Return\ nombreComida\r\n\r\n
+comment3.params=
+comment3.target=int\ getCalorias()
+comment3.text=\r\n\r\n\ @return\ cantidad\ de\ calorias\ de\ la\ comida.\r\n
+comment4.params=nombreComida
+comment4.target=void\ setNombre(java.lang.String)
+comment4.text=\r\n\ \r\n\ @param\ nombre\ El\ nuevo\ nombre\ de\ la\ comida.\r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ Devuelve\ una\ cadena\ con\ toda\ la\ informacion\ de\ la\ comida.\r\n\ @return\ Devuelve\ una\ cadena\ con\ toda\ la\ informacion\ de\ la\ comida.\r\n
+comment6.params=
+comment6.target=void\ show()
+comment6.text=\r\n\ Informacion\ de\ la\ comida.\r\n
+numComments=7
